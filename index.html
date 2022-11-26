@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeopardy Register</title>
+    
+    <link rel=stylesheet type="text/css" href=jeopardy.css>
+    </head>
+    <body>
+
+ <div class="gameContainer">
+    <div class="container"><img src=Jeopardy.png width="1000" height="590"></div>
+    <div>
+        <form id="form" action="/">
+        <!--<center>-->
+            <h1 style="color: #008CBA">Registration</h1>
+            <div class="input-control">
+                <label for="userfname">First Name<font color="red">&ast;</font></label>
+                <input id="userfname" name="userfname" type="text" placeholder="First Name">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="userlname">Last Name<font color="red">&ast;</font></label>
+                <input id="userlname" name="userlname" type="text" placeholder="Last Name">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="email">Email<font color="red">&ast;</font></label>
+                <input id="email" name="email" type="text" placeholder="example@SomeEmail.com">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="gender">Gender<font color="red">&ast;</font></label>
+                <input id="gender"name="gender" type="gender" placeholder="Male/Female">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="educationallevel">Educational Level<font color="red">&ast;</font></label>
+                 <input id="educationallevel"name="educationallevel" type="educationallevel" placeholder="Educational Level">
+                <div class="error"></div>
+            </div></br>
+            
+            <div class="input-control">
+                <label for="street">Street<font color="red">&ast;</font></label>
+                 <input id="street"name="street" type="street" placeholder="Street">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="city">City<font color="red">&ast;</font></label>
+                 <input id="city"name="city" type="city" placeholder="City">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="town">Town<font color="red">&ast;</font></label>
+                 <input id="town"name="town" type="town" placeholder="Town">
+                <div class="error"></div></br>
+            </div>
+            <div class="input-control">
+                <label for="country">Country<font color="red">&ast;</font></label>
+                 <input id="country"name="country" type="country" placeholder="Country">
+                <div class="error"></div></br>
+            </div>
+            
+            </br>
+            
+            Date of Birth<font color="red">&ast;</font> <input type=date id = DOB>
+            <span id = "message" style="color:red"> </span> <br><br>
+            <center>
+                <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>
+                <h3 style="color:#008CBA" id="result" align="center"></h3>
+                <button type="submit">Register</button> <button type="reset">Reset</button><br><br>
+                <button type="submit" id="play" disabled onclick="openGame()">Play Game </button> <button type="submit" id="end" disabled>End Game</button>
+            </center>
+
+
+
+        <a href=""></a>
+        </form>
+        <!--</center>-->
+        </div>
+    </div>
+    <br>
+    <div align="center" id="percentage">
+        <textarea id="showPercentage" name="" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit" id="quit" onclick="findPercentageScore()">Quit</button>
+    </div>
+    
+    </body>
+    <script type="text/javascript" src="Register.js"></script>
+    </html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Board</title>
+    
+    <link rel=stylesheet type="text/css" href=jeopardy.css>
+
+</head>
+<body>
+    <center>
+
+        <table id=jboard bordercolor=blue cellspacing="5" cellpadding="10">
+            <tr>
+                <th>Numbers</th>
+                <th>Animals</th>
+                <th>Sports</th>
+                <th>Jamaican Culture</th>
+                <th>Food</th>
+
+            </tr>
+
+            <tr>
+                <td><button id="c1_1" onclick="enableQues1()">$100</button></td>
+                <td><button id="c2_1" onclick="enableA_Q1()">$100</button></td>
+                <td><button id="c3_1" onclick="enableS_Q1()">$100</button></td>
+                <td><button id="c4_1" onclick="enableJ_Q1()">$100</button></td>
+                <td><button id="c5_1" onclick="enableF_Q1()">$100</button></td>
+            </tr>
+
+            <tr>
+                <td><button id="c1_2" onclick="enableQues2()">$200</button></td>
+                <td><button id="c2_2" onclick="enableA_Q2()">$200</button></td>
+                <td><button id="c3_2" onclick="enableS_Q2()">$200</button></td>
+                <td><button id="c4_2" onclick="enableJ_Q2()">$200</button></td>
+                <td><button id="c5_2" onclick="enableF_Q2()">$200</button></td>
+            </tr>
+
+            <tr>
+                <td><button id="c1_3" onclick="enableQues3()">$300</button></td>
+                <td><button id="c2_3" onclick="enableA_Q3()">$300</button></td>
+                <td><button id="c3_3" onclick="enableS_Q3()">$300</button></td>
+                <td><button id="c4_3" onclick="enableJ_Q3()">$300</button></td>
+                <td><button id="c5_3" onclick="enableF_Q3()">$300</button></td>
+            </tr>
+
+            <tr>
+                <td><button id="c1_4" onclick="enableQues4()">$400</button></td>
+                <td><button id="c2_4" onclick="enableA_Q4()">$400</button></td>
+                <td><button id="c3_4" onclick="enableS_Q4()">$400</button></td>
+                <td><button id="c4_4" onclick="enableJ_Q4()">$400</button></td>
+                <td><button id="c5_4" onclick="enableF_Q4()">$400</button></td>
+            </tr>
+
+            <tr>
+                <td><button id="c1_5" onclick="enableQues5()">$500</button></td>
+                <td><button id="c2_5" onclick="enableA_Q5()">$500</button></td>
+                <td><button id="c3_5" onclick="enableS_Q5()">$500</button></td>
+                <td><button id="c4_5" onclick="enableJ_Q5()">$500</button></td>
+                <td><button id="c5_5" onclick="enableF_Q5()">$500</button></td>
+            </tr>
+        </table>
+
+        <table id="scoreTable">
+            <tr>
+                <td><h4>Score:</h4></td>
+                <td><h4 id="Score">0</h4></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td><h4>Timer:</h4></td>
+                <td><h4 id="timer">60 sec</h4></td>
+            </tr>
+        </table>
+    
+        <!-- Numbers Category -->
+        <!-- Question 1-->
+        <div bordercolor=blue hidden class="Questions" id="div_c1_1">
+            <p> Odd Numbers between 0 and 5</p>
+            <input placeholder="Enter answer" id="inp_c1_1"><br><br><br>
+            <button class="question_button" onclick="hideScore(), question1()">Submit Answer</button>
+        </div>
+
+          <!-- Question 2-->
+        <div bordercolor=blue hidden class="Questions" id="div_c1_2">
+            <p> Even Numbers between 0 and 5</p>
+            <input placeholder="Enter answer" id="inp_c1_2"><br><br><br>
+            <button class="question_button" onclick="hideScore2(), question2()">Submit Answer</button>
+        </div>
+
+          <!-- Question 3-->
+        <div bordercolor=blue hidden class="Questions" id="div_c1_3">
+            <p> Forbidden Number of the bible</p>
+            <input placeholder="Enter answer" id="inp_c1_3"><br><br><br>
+            <button class="question_button" onclick="hideScore3(), question3()">Submit Answer</button>
+        </div>
+
+         <!-- Question 4-->
+        <div bordercolor=blue hidden class="Questions" id="div_c1_4">
+            <p>Binary represation of 2</p>
+            <input placeholder="Enter answer" id="inp_c1_4"><br><br><br>
+            <button class="question_button" onclick="hideScore4(), question4()">Submit Answer</button>
+        </div>
+
+        <!-- Question 5-->
+        <div bordercolor=blue hidden class="Questions" id="div_c1_5">
+            <p>1 TB in GB</p>
+            <input placeholder="Enter answer" id="inp_c1_5"><br><br><br>
+            <button class="question_button" onclick="hideScore5(), question5()">Submit Answer</button>
+        </div>
+
+        <!-- Animals Category -->
+        <!-- Question 1-->
+        <div bordercolor=blue hidden class="Questions" id="div_c2_1">
+            <p> Which animal is known as man's best friend?</p>
+            <input placeholder="Enter answer" id="inp_c2_1"><br><br><br>
+            <button class="question_button" onclick="hideScore_a1(), animalsQ1()">Submit Answer</button>
+        </div>
+
+         <!-- Question 2-->
+         <div bordercolor=blue hidden class="Questions" id="div_c2_2">
+            <p> What kind of fish is Nemo?</p>
+            <input placeholder="Enter answer" id="inp_c2_2"><br><br><br>
+            <button class="question_button" onclick="hideScore_a2(), animalsQ2()">Submit Answer</button>
+        </div>
+
+         <!-- Question 3-->
+         <div bordercolor=blue hidden class="Questions" id="div_c2_3">
+            <p> What is the only animal that cannot jump?</p>
+            <input placeholder="Enter answer" id="inp_c2_3"><br><br><br>
+            <button class="question_button" onclick="hideScore_a3(), animalsQ3()">Submit Answer</button>
+        </div>
+
+        <!-- Question 4-->
+        <div bordercolor=blue hidden class="Questions" id="div_c2_4">
+            <p> What bird is the symbol of peace?</p>
+            <input placeholder="Enter answer" id="inp_c2_4"><br><br><br>
+            <button class="question_button" onclick="hideScore_a4(), animalsQ4()">Submit Answer</button>
+        </div>
+
+         <!-- Question 5-->
+         <div bordercolor=blue hidden class="Questions" id="div_c2_5">
+            <p> What is the name of the world's biggest shark?</p>
+            <input placeholder="Enter answer" id="inp_c2_5"><br><br><br>
+            <button class="question_button" onclick="hideScore_a5(), animalsQ5()">Submit Answer</button>
+        </div>
+
+        <!-- Sports Category -->
+        <!-- Question 1-->
+        <div bordercolor=blue hidden class="Questions" id="div_c3_1">
+            <p>The Olympics are held every how many years?</p>
+            <input placeholder="Enter answer" id="inp_c3_1"><br><br><br>
+            <button class="question_button" onclick="hideScore_s1(), sportsQ1()" >Submit Answer</button>
+        </div>
+
+         <!-- Question 2-->
+         <div bordercolor=blue hidden class="Questions" id="div_c3_2">
+            <p>Which sport is alot like softball?</p>
+            <input placeholder="Enter answer" id="inp_c3_2"><br><br><br>
+            <button class="question_button" onclick="hideScore_s2(), sportsQ2()">Submit Answer</button>
+        </div>
+
+         <!-- Question 3-->
+         <div bordercolor=blue hidden class="Questions" id="div_c3_3">
+            <p>How many players are on a netball team?</p>
+            <input placeholder="Enter answer" id="inp_c3_3"><br><br><br>
+            <button class="question_button" onclick="hideScore_s3(), sportsQ3()">Submit Answer</button>
+        </div>
+
+        <!-- Question 4-->
+        <div bordercolor=blue hidden class="Questions" id="div_c3_4">
+            <p>What is the national sport of Canada?</p>
+            <input placeholder="Enter answer" id="inp_c3_4"><br><br><br>
+            <button class="question_button" onclick="hideScore_s4(), sportsQ4()">Submit Answer</button>
+        </div>
+
+         <!-- Question 5-->
+         <div bordercolor=blue hidden class="Questions" id="div_c3_5">
+            <p>How many miles are in a marathon?</p>
+            <input placeholder="Enter answer" id="inp_c3_5"><br><br><br>
+            <button class="question_button" onclick="hideScore_s5(), sportsQ5()">Submit Answer</button>
+        </div>
+        
+        <!-- Jamaican Culture Category-->
+        <!-- Question 1-->
+        <div bordercolor=blue hidden class="Questions" id="div_c4_1">
+            <p>How many colours are on the Jamaican flag?</p>
+            <input placeholder="Enter answer" id="inp_c4_1"><br><br><br>
+            <button class="question_button" onclick="hideScore_j1(), JamQ1()">Submit Answer</button>
+        </div>
+
+        <!-- Question 2-->
+        <div bordercolor=blue hidden class="Questions" id="div_c4_2">
+            <p>How is the current prime minister of Jamaica?</p>
+            <input placeholder="Enter answer" id="inp_c4_2"><br><br><br>
+            <button class="question_button" onclick="hideScore_j2(), JamQ2()">Submit Answer</button>
+        </div>
+
+        <!-- Question 3-->
+        <div bordercolor=blue hidden class="Questions" id="div_c4_3">
+            <p>In what year did Jamaica gain independence?</p>
+            <input placeholder="Enter answer" id="inp_c4_3"><br><br><br>
+            <button class="question_button" onclick="hideScore_j3(), JamQ3()">Submit Answer</button>
+        </div>
+
+        <!-- Question 4-->
+        <div bordercolor=blue hidden class="Questions" id="div_c4_4">
+            <p>Which parish is Usain Bolt from?</p>
+            <input placeholder="Enter answer" id="inp_c4_4"><br><br><br>
+            <button class="question_button" onclick="hideScore_j4(), JamQ4()">Submit Answer</button>
+        </div>
+
+        <!-- Question 5-->
+        <div bordercolor=blue hidden class="Questions" id="div_c4_5">
+            <p>What was the capital of Jamaica before Kingston?</p>
+            <input placeholder="Enter answer" id="inp_c4_5"><br><br><br>
+            <button class="question_button" onclick="hideScore_j5(), JamQ5()">Submit Answer</button>
+        </div>
+
+        <!-- Food Category-->
+        <!-- Question 1-->
+        <div bordercolor=blue hidden class="Questions" id="div_c5_1">
+            <p>What is the only food with seeds on the outside?</p>
+            <input placeholder="Enter answer" id="inp_c5_1"><br><br><br>
+            <button class="question_button" onclick="hideScore_f1(), FoodQ1()">Submit Answer</button>
+        </div>
+
+        <!-- Question 2-->
+        <div bordercolor=blue hidden class="Questions" id="div_c5_2">
+            <p>What is the only food that can never go bad?</p>
+            <input placeholder="Enter answer" id="inp_c5_2"><br><br><br>
+            <button class="question_button" onclick="hideScore_f2(), FoodQ2()">Submit Answer</button>
+        </div>
+
+        <!-- Question 3-->
+        <div bordercolor=blue hidden class="Questions" id="div_c5_3">
+            <p>What is the hottest pepper in the world?</p>
+            <input placeholder="Enter answer" id="inp_c5_3"><br><br><br>
+            <button class="question_button" onclick="hideScore_f3(), FoodQ3()">Submit Answer</button>
+        </div>
+
+        <!-- Question 4-->
+        <div bordercolor=blue hidden class="Questions" id="div_c5_4">
+            <p>What year were chocolate chips invented?</p>
+            <input placeholder="Enter answer" id="inp_c5_4"><br><br><br>
+            <button class="question_button" onclick="hideScore_f4(), FoodQ4()">Submit Answer</button>
+        </div>
+
+        <!-- Question 5-->
+        <div bordercolor=blue hidden class="Questions" id="div_c5_5">
+            <p>Where were french fries invented?</p>
+            <input placeholder="Enter answer" id="inp_c5_5"><br><br><br>
+            <button class="question_button" onclick="hideScore_f5(), FoodQ5()">Submit Answer</button>
+        </div>
+
+
+</center>
+
+
+<script src="Register.js"></script>
+</body>
+
+</html>
